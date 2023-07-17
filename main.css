@@ -20,6 +20,8 @@ body{
     height: 15vh;
     color: aliceblue;
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    z-index: 1;
 }
 .header.small{
     height: 8vh;
@@ -82,7 +84,7 @@ body{
     gap: 20px;
 }
 .project-desc{
-    width: 900px;
+    max-width: 800px;
     text-align: center;
     font-size: 18px;
     font-family: roboto;
