@@ -66,7 +66,7 @@ body{
 .top-text p{
     padding: 3px 0px;
 }
-@font-face { font-family: Delicious; src: url('faant.otf'); }
+@font-face { font-family: Delicious; src: url('styles/faant.otf'); }
 .bigboi{
     display: flex;
     flex-direction: column;
