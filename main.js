@@ -1,5 +1,5 @@
 window.addEventListener('scroll',function() {
-    var top = this.document.querySelector('.header');
+    var top = this.document.querySelector('header');
     var scroll = this.window.scrollY;
 
     if(scroll > 0) {
