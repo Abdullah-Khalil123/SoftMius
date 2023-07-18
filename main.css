@@ -20,7 +20,6 @@ body{
     height: 15vh;
     color: aliceblue;
     font-family: 'Open Sans', sans-serif;
-    margin-bottom: 30px;
     z-index: 1;
 }
 .header.small{
