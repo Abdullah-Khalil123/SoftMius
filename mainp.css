@@ -1,3 +1,4 @@
+@font-face { font-family: Delicious; src: url('styles/faant.otf'); }
 *{
     margin: 0;
     scroll-behavior: smooth;
@@ -24,6 +25,26 @@ body{
     height: 100vh;
     object-fit: cover;
     object-position: center;
+}
+@media (max-width:780px){
+    .parallax{
+        height: 80vh;
+    }
+    .parallax img{
+        height: 80vh;
+    }
+}
+@media (max-width:632px){
+    .parallax{
+        height: 60vh;
+    }
+    .parallax img{
+        height: 60vh;
+    }
+}
+.polio{
+    font-size: 44px;
+    font-family: Delicious;
 }
 .blob{
     width: 100px;
@@ -73,8 +94,8 @@ body{
 }
 
 #text{
-    top: 50%;
-    left: 30%;
+    top: 40%;
+    left: 45%;
     position: absolute;
     white-space: nowrap;
     text-align: center;
