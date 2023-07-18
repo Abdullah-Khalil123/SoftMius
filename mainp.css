@@ -26,6 +26,10 @@ body{
     object-fit: cover;
     object-position: center;
 }
+.polio{
+    font-size: 48px;
+    font-family: Delicious;
+}
 @media (max-width:780px){
     .parallax{
         height: 80vh;
@@ -41,6 +45,9 @@ body{
     .parallax img{
         height: 60vh;
     }
+    .polio{
+        font-size: 36px;
+    }
 }
 @media (max-width:490px){
     .parallax{
@@ -49,10 +56,9 @@ body{
     .parallax img{
         height: 40vh;
     }
-}
-.polio{
-    font-size: 44px;
-    font-family: Delicious;
+    .polio{
+        font-size: 24px;
+    }
 }
 .blob{
     width: 100px;
