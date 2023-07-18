@@ -51,10 +51,10 @@ body{
 }
 @media (max-width:490px){
     .parallax{
-        height: 40vh;
+        height: 35vh;
     }
     .parallax img{
-        height: 40vh;
+        height: 35vh;
     }
     .polio{
         font-size: 24px;
