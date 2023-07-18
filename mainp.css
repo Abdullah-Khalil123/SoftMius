@@ -10,8 +10,7 @@ body{
     overflow-x: hidden;
 }
 .parallax {
-    margin-top: -15vh;
-    position:absolute;
+    position:fixed;
     top: 0;
     overflow: hidden;
     position: relative;
