@@ -67,10 +67,13 @@ body{
 }
 
 .Explore{
+    display: flex;
     position: absolute;
     margin-top: 0px;
-    top: 60%;
+    top: 50%;
     left: 50%;
+    font-family: Delicious;
+    align-items: center;
 }
 #back-m{
     transform: translateY(-1.2px);
