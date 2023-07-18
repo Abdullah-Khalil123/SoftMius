@@ -42,6 +42,14 @@ body{
         height: 60vh;
     }
 }
+@media (max-width:490px){
+    .parallax{
+        height: 40vh;
+    }
+    .parallax img{
+        height: 40vh;
+    }
+}
 .polio{
     font-size: 44px;
     font-family: Delicious;
