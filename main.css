@@ -33,6 +33,14 @@ header{
     right: 0;
     font-size: 30px;
 }
+@media (max-width:490px){
+    .about,.home{
+        font-size: 8px;
+    }
+    .transparent-header{
+        font-size: 16px;
+    }
+}
 .about,.home{
     font-size: 16px;
 }
@@ -52,6 +60,10 @@ header{
 }
 header.small{
     height: 10.5vh;
+    transition: 0.5s;
+}
+header.big{
+    height: 13vh;
     transition: 0.5s;
 }
 .h-a{
