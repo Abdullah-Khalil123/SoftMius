@@ -24,15 +24,20 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 12vh;
     color: aliceblue;
     font-family: 'Open Sans', sans-serif;
     z-index: 10;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     left: 0;
     right: 0;
+    font-size: 30px;
+}
+.about,.home{
+    font-size: 16px;
 }
 .transparent-header{
+    font-size: 34px;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,13 +45,13 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 13vh;
     color: aliceblue;
     font-family: 'Open Sans', sans-serif;
     z-index: 10;
 }
 header.small{
-    height: 9.5vh;
+    height: 10.5vh;
     transition: 0.5s;
 }
 .h-a{
