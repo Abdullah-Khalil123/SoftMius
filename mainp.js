@@ -3,15 +3,12 @@ let back = document.getElementById('back-m');
 let front = document.getElementById('front-mount');
 let birbs = document.getElementById('birbs');
 let explore = document.getElementById('Explore');
-let text = document.getElementById('text');
 
 window.addEventListener('scroll',function () {
     let value = window.scrollY;
     back.style.top = value * 0.45 + 'px';
     birbs.style.left =- value * 0.5 + 'px';
     sky.style.top = value * 0.55 + 'px';
-    text.style.marginLeft = value + 'px';
-    text.style.marginTop = value * 0.5 + 'px';
     //explore.style.marginTop = value * 0.6 + 'px';
 });
 
@@ -34,4 +31,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Attach the handleScroll function to the scroll event
     window.addEventListener('scroll', handleScroll);
   });
-  
+  let scrollingDown = false;
+        let prevScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        function toggleAnimationDirection() {
+            const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+            scrollingDown = currentScrollPos > prevScrollPosition;
+            prevScrollPosition = currentScrollPos;
+
+            const marqueeElements = document.querySelectorAll('.marquee span');
+            marqueeElements.forEach(element => {
+                if (scrollingDown) {
+                    element.style.animation = 'marquee-reverse 10s linear infinite';
+                } else {
+                    element.style.animation = 'marquee 10s linear infinite';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', toggleAnimationDirection);
+ 
