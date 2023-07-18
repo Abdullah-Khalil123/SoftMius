@@ -13,6 +13,7 @@ body{
     top: 0;
     overflow: hidden;
     position: relative;
+    background-color: rgb(34, 47, 91);
     height: 100vh;
 }
 .parallax img{
