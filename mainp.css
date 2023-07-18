@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: darkblue;
+    height: 200vh;
+    overflow-x: hidden;
+}
+.parallax {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+.blob{
+    width: 100px;
+    height: 50vh;
+    background-color: red;
+}
+
+.Explore{
+    position: absolute;
+    margin-top: 0px;
+    top: 60%;
+    left: 50%;
+}
+#back-m{
+    transform: translateY(-1.2px);
+}
+.Explore p{
+    z-index: 1;
+    background-color: white;
+    position: relative;
+    color: black;
+    overflow: hidden;
+    padding: 10px 25px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.Explore p::after{
+    content: '';
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:darkgoldenrod;
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+.Explore p:hover{
+    color: black;
+}
+.Explore p:hover::after{
+    transform: scaleX(1);
+}
+
+#text{
+    top: 50%;
+    left: 30%;
+    position: absolute;
+    white-space: nowrap;
+    text-align: center;
+}
