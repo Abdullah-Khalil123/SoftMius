@@ -138,3 +138,7 @@ body{
         grid-template-columns: 1fr;
     }
 }
+.not-purple-bs{
+    text-decoration: none;
+    color: black;
+}
