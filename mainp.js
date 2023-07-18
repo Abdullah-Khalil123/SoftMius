@@ -41,10 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const marqueeElements = document.querySelectorAll('.marquee span');
             marqueeElements.forEach(element => {
+                // Toggle animation direction by switching animation name
                 if (scrollingDown) {
-                    element.style.animation = 'marquee-reverse 10s linear infinite';
+                    element.style.animationName = 'marquee-reverse';
                 } else {
-                    element.style.animation = 'marquee 10s linear infinite';
+                    element.style.animationName = 'marquee';
                 }
             });
         }
