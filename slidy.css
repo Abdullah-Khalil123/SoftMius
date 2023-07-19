@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 120vh; /*Test Purposes*/
+}
+.sliders{
+    overflow: hidden;
+    background-color: antiquewhite;
+    border-radius: 0% 0% 50% 50% / 85% 85% 15% 15%;
+    transition: border-radius 0.2s ease;
+    padding-bottom: 70px;
+
+}
+.object{
+    border-radius: 10px;
+    height: 100%;
+    margin: 0px 5px;
+    min-width: 300px;
+    min-height: 200px;
+    width: 25%;
+    background-color: rgba(179, 179, 179, 0.538);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.object img{
+    width: 90%;
+    max-height: 95%;
+}
+.row{
+    transition: transform 0.1s ease;
+    display: flex;
+    width: 120%;
+    height: 200px;
+    margin: 10px 0px;
+}
+#row1{
+    transform: translateX(-70px);
+}
+#row2{
+    transform: translateX(-15px);
+}
