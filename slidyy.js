@@ -41,7 +41,7 @@ observer.observe(row2);
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;                                //extra height    // below div height - 10
-  const totalHeight = document.body.clientHeight - window.innerHeight + 769;
+  const totalHeight = document.body.clientHeight - window.innerHeight + 700;
 
   const scrollPercentage = (scrollPosition / totalHeight) * 100;
 
