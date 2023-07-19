@@ -40,20 +40,16 @@ observer.observe(row2);
 ///////////////////////////////////////////
 
 window.addEventListener("scroll", () => {
-  const scrollPosition = window.scrollY;
-  const totalHeight = document.body.clientHeight - window.innerHeight;
+  const scrollPosition = window.scrollY;                                //extra height    // below div height - 10
+  const totalHeight = document.body.clientHeight - window.innerHeight + 769;
 
   const scrollPercentage = (scrollPosition / totalHeight) * 100;
 
+  console.log(scrollPercentage,',',scrollPosition,',',totalHeight);
+  const maxBorderRadius = 100;
 
-  if(scrollPercentage > 75){
-
-    
-  const maxBorderRadius = 50;
-
-  const newBorderRadius = maxBorderRadius - (maxBorderRadius * scrollPercentage) / 100;
-
+  const newBorderRadius = (maxBorderRadius - (maxBorderRadius * scrollPercentage) / 100);
+ // console.log(newBorderRadius);
   scrollDiv.style.borderRadius = `0% 0% 50% 50% / ${newBorderRadius}% ${newBorderRadius}% ${newBorderRadius}% ${newBorderRadius}%`;
-  }
-
+  
 });
