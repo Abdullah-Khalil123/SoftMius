@@ -31,24 +31,44 @@ document.addEventListener('DOMContentLoaded', function () {
     // Attach the handleScroll function to the scroll event
     window.addEventListener('scroll', handleScroll);
   });
+   let i = 0;
+  const increment = 0.125;
+  const decrement = -0.125;
   let scrollingDown = false;
-        let prevScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-        function toggleAnimationDirection() {
-            const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-            scrollingDown = currentScrollPos > prevScrollPosition;
-            prevScrollPosition = currentScrollPos;
-
-            const marqueeElements = document.querySelectorAll('.marquee span');
-            marqueeElements.forEach(element => {
-                // Toggle animation direction by switching animation name
-                if (scrollingDown) {
-                    element.style.animationName = 'marquee-reverse';
-                } else {
-                    element.style.animationName = 'marquee';
-                }
-            });
-        }
-
-        window.addEventListener('scroll', toggleAnimationDirection);
  
+  function updateMarqueePosition() {
+    const marquee = document.getElementById("marqueer");
+    marquee.style.transform = `translateX(${i}%)`;
+
+    const marqueeer=document.getElementById("marqueeer");
+    marqueeer.style.transform=`translateX(${i-100}%)`;
+
+    const marqur=document.getElementById("marqur");
+    marqur.style.transform=`translateX(${i+100}%)`;
+    if (!scrollingDown) {
+      i += increment;
+      if (i >= 100) {
+        i = 0;
+      }
+    } else {
+      i += decrement;
+      if (i <= -100) {
+        i = 100;
+      }
+    }
+    requestAnimationFrame(updateMarqueePosition);
+  }
+
+  requestAnimationFrame(updateMarqueePosition);
+
+  let prevScrollY = window.scrollY;
+
+  function updateScrollDirection() {
+    const currentScrollY = window.scrollY;
+    scrollingDown = currentScrollY > prevScrollY;
+    prevScrollY = currentScrollY;
+  }
+
+  window.addEventListener("scroll", updateScrollDirection);
+
