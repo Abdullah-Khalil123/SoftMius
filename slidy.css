@@ -51,7 +51,13 @@
     }
 }
 @media (max-width:735px){
-    .object:nth-child(3){
-        display: none;
+    .object{
+        height:45%;
+    }
+    .row{
+        gap: 5px;
+    }
+    .sliders{
+        gap: 0px;
     }
 }
