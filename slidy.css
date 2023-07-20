@@ -2,6 +2,9 @@
     transition: border-radius 0.2s ease;
     overflow: hidden;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap:120px;
 }
 .Aboutus{
     width: 100%;
@@ -12,12 +15,9 @@
     z-index: -1;
 }
 .object{
-    border-radius: 10px;
+    flex: 1;
     height: 100%;
-    margin: 0px 5px;
-    min-width: 300px;
-    min-height: 200px;
-    width: 25%;
+    padding: 37.5px 0px;
     background-color: rgba(179, 179, 179, 0.538);
     display: flex;
     justify-content: center;
@@ -32,11 +32,26 @@
     display: flex;
     width: 120%;
     height: 200px;
-    margin: 10px 0px;
+    gap: 35px;
 }
 #row1{
     transform: translateX(-70px);
 }
 #row2{
     transform: translateX(-15px);
+}
+.inner-object{
+    background-color: pink;
+    width: 80%;
+    height: 100%;
+}
+@media (max-width:1070px){
+    .object:nth-child(4){
+        display: none;
+    }
+}
+@media (max-width:735px){
+    .object:nth-child(3){
+        display: none;
+    }
 }
