@@ -10,6 +10,11 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+body::-webkit-scrollbar {
+    width: 0; 
+}
+
+
 header{
     padding: 30px;
     padding-top: 0px;
