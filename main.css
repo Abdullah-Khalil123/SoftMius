@@ -115,7 +115,7 @@ header.big{
 }
 @font-face { font-family: Delicious; src: url('styles/faant.otf'); }
 .bigboi{
-    background-image: linear-gradient(to bottom,rgb(34, 47, 91) 0%,rgb(34, 47, 91)10%,white 70%);    border-radius: 0% 0% 50% 50% / 85% 85% 15% 15%;
+    background-image: linear-gradient(to bottom,rgb(34, 47, 91) 0%,rgb(34, 47, 91)10%,white 70%);
     padding-top: 40px;
     display: flex;
     flex-direction: column;
