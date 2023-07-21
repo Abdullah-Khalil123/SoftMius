@@ -104,7 +104,9 @@ body{
     display: flex;
     position: absolute;
     margin-top: 0px;
-    top: 65%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    top:65%;
     left: 50%;
     font-family: Delicious;
     align-items: center;
