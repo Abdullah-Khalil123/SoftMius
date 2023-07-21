@@ -9,8 +9,8 @@ let initialTransform2 = 100;
 function handleScroll() {
   const newPosition = window.scrollY;
   const scrollDifference = newPosition - initialScrollPosition;
-  row1.style.transform = `translateX(${initialTransform1 + scrollDifference * 0.05}px)`;
-  row2.style.transform = `translateX(${initialTransform2 - scrollDifference * 0.05}px)`;
+  row1.style.transform = `translateX(${initialTransform1 + scrollDifference * 0.15}px)`;
+  row2.style.transform = `translateX(${initialTransform2 - scrollDifference * 0.15}px)`;
 }
 
 function checkElementsInView(entries) {
