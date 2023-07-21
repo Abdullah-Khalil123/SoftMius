@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
     magicButton.style.animationName = "popOffAnimation";
     setTimeout(() => {
       magicButton.style.display = "none";
-    }, 200);
+    }, 250);
   }
 });
 
@@ -37,32 +37,31 @@ magicButton2.addEventListener('click', () => {
 });
 
 const magicButton4 = document.getElementById('magicButton');
-const whyb=document.getElementById('whymagicc');
-    const zaBox = document.querySelector('.za-box');
+    const whyMagic = document.getElementById('whymagicc');
 
-    zaBox.addEventListener('mouseenter', () => {
-        magicButton4.classList.add('quick-movement');
-        whyb.classList.add('quick-movement');
+    const range=2;
+    const ranger=3;
+
+    magicButton4.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      const magicRect = magicButton4.getBoundingClientRect();
+      const magicCenterX = magicRect.left + magicRect.width / 2;
+      const magicCenterY = magicRect.top + magicRect.height / 2;
+
+      const offsetX = (mouseX - magicCenterX) / range;
+      const offsetY = (mouseY - magicCenterY) / range;
+
+      const offseterX = (mouseX - magicCenterX) / ranger;
+      const offseterY = (mouseY - magicCenterY) / ranger;
+
+
+      magicButton4.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+      whyMagic.style.transform = `translate(${offseterX}px, ${offseterY}px)`;
     });
 
-    magicButton4.addEventListener('mousemove', (event) => {
-        const zaBoxRect = magicButton4.getBoundingClientRect();
-        const zaBoxCenterX = zaBoxRect.left + zaBoxRect.width/2 ;
-        const zaBoxCenterY = zaBoxRect.top + zaBoxRect.height/2 ;
-        
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
-        
-        const deltaX = mouseX - zaBoxCenterX;
-        const deltaY = mouseY - zaBoxCenterY;
-        
-        magicButton4.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-        whyb.style.transform=`translate(${deltaX/2}px,${deltaY/2}px)`;
-    });
-
-    magicButton4.addEventListener('mouseleave', () => {
-        magicButton4.style.transform = 'translate(0, 0)';
-        magicButton4.classList.remove('quick-movement');
-        whyb.classList.remove(`quick-movement`);
-        whyb.style.transform=`translate(0,0)`;
+    magicButton.addEventListener('mouseleave', () => {
+      magicButton4.style.transform = 'translate(0, 0)';
+      whyMagic.style.transform = 'translate(0, 0)';
     });
