@@ -28,7 +28,7 @@
     max-height: 95%;
 }
 .row{
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease-out;
     display: flex;
     width: 120%;
     height: 200px;
