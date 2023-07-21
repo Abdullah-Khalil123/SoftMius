@@ -41,12 +41,13 @@ observer.observe(row2);
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;                                //extra height    // below div height - 10
-  const totalHeight = document.body.clientHeight - window.innerHeight + 700;
+  const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
 
   const scrollPercentage = (scrollPosition / totalHeight) * 100;
 
   console.log(scrollPercentage,',',scrollPosition,',',totalHeight);
-  const maxBorderRadius = 100;
+  const maxBorderRadius = 50;
 
   const newBorderRadius = (maxBorderRadius - (maxBorderRadius * scrollPercentage) / 100);
  // console.log(newBorderRadius);
